@@ -1,6 +1,6 @@
 /*
     file: shapes.turtle
-    tutorial: DSL for the Python's turtle module with textX
+    tutorial: DSL for the Python's turtle module, created using textX
  */
 
 shape black_and_white
