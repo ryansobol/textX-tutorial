@@ -6,6 +6,7 @@ authors = ["Ryan Sobol <hello@ryansobol.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
+textx = "^2.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
