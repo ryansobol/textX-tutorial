@@ -1,3 +1,7 @@
+Comment:
+    /\/\*(.|\n)*?\*\// | /\/\/.*?$/
+;
+
 Scene:
     shapes*=Shape
     draw_instructions*=DrawInstruction
@@ -20,7 +24,8 @@ Direction:
 ;
 
 Bearing:
-    'E' | 'NE' | 'SE' | 'W' | 'NW' | 'SW' | 'N' | 'S'
+    /* Notice that the bearing definitions are ordered in a strange way. We’ve chosen an order among many possibilities, but with the property that a string precedes its substrings. For example, 'NE' comes before 'N'. This is necessary because the parser chooses the first match and doesn’t backtrack, so if we had put 'N' before 'NE', the 'NE' option would never be reached and the parser would fail to recognize the string, 'NE'. In fact, Arpeggio, the parser used by textX, is a PEG parser – this means that the choice operator is deterministic and ordered. */
+    'E' | 'NE' | 'NW' | 'N' | 'SE' | 'SW' | 'S' | 'W'
 ;
 
 Angle:
