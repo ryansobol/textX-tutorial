@@ -1,0 +1,74 @@
+
+    digraph textX {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+140194137499712[ label="{Scene|}"]
+
+140194137503168[ label="{Shape|+name:ID\l}"]
+
+140194137507152[ label="{Line|+length:INT\l}"]
+
+140194137510560[ label="{Direction|+bearing:Bearing\l}"]
+
+140194137513968[ label="{Bearing|E\|NE\|SE\|W\|NW\|SW\|N\|S}"]
+
+140194137517376[ label="{Angle|+degrees:FLOAT\l}"]
+
+140194137502224[ label="{LineColor|+color:Color\l}"]
+
+140194137520208[ label="{FillColor|+color:Color\l}"]
+
+140194137523616[ label="{Color|red\|green\|blue\|yellow\|magenta\|cyan\|black\|white\|#[0-9a-f]\{6\}}"]
+
+140194137527600[ label="{DrawInstruction|}"]
+
+140194166934240[ label="{Position|+x:INT\l+y:INT\l}"]
+
+140194140579920[ label="{ID|}"]
+
+140194140583328[ label="{STRING|}"]
+
+140194140586736[ label="{BOOL|}"]
+
+140194140582384[ label="{INT|}"]
+
+140194140590144[ label="{FLOAT|}"]
+
+140194140592976[ label="{STRICTFLOAT|}"]
+
+140194140596384[ label="{NUMBER|}"]
+
+140194140600368[ label="{BASETYPE|}"]
+
+140194140603776[ label="{*OBJECT|}"]
+
+
+
+140194137499712 -> 140194137503168[arrowtail=diamond, dir=both, headlabel="shapes 0..*"]
+140194137499712 -> 140194137527600[arrowtail=diamond, dir=both, headlabel="draw_instructions 0..*"]
+140194137503168 -> 140194137502224[arrowtail=diamond, dir=both, headlabel="line_color "]
+140194137503168 -> 140194137520208[arrowtail=diamond, dir=both, headlabel="fill_collor "]
+140194137503168 -> 140194137507152[arrowtail=diamond, dir=both, headlabel="lines 1..*"]
+140194137507152 -> 140194137510560[arrowtail=diamond, dir=both, headlabel="direction "]
+140194137510560 -> 140194137517376[arrowtail=diamond, dir=both, headlabel="angle "]
+140194137527600 -> 140194137503168[headlabel="shape "]
+140194137527600 -> 140194166934240[arrowtail=diamond, dir=both, headlabel="position "]
+140194140596384 -> 140194140592976 [dir=back]
+140194140596384 -> 140194140582384 [dir=back]
+140194140600368 -> 140194140596384 [dir=back]
+140194140600368 -> 140194140590144 [dir=back]
+140194140600368 -> 140194140586736 [dir=back]
+140194140600368 -> 140194140579920 [dir=back]
+140194140600368 -> 140194140583328 [dir=back]
+140194140603776 -> 140194140600368 [dir=back]
+
+}
