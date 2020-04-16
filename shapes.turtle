@@ -3,7 +3,7 @@
     tutorial: DSL for the Python's turtle module, created using textX
  */
 
-shape black_and_white
+shape trapezoid
     // The default pen color is black.
     // The default fill color is white.
     line E 150
@@ -31,4 +31,4 @@ end
 
 draw triangle // The default position is 0,0 which is the center of the canvas.
 draw square at -10, -10
-draw black_and_white at 225, 150
+draw trapezoid at 225, 150
