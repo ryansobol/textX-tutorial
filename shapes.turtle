@@ -1,8 +1,11 @@
-/*** file: triangle_and_square.turtle
- *** tutorial: Quick Domain-Specific Languages in Python with textX
- ***/
+/*
+    file: shapes.turtle
+    tutorial: DSL for the Python's turtle module with textX
+ */
 
 shape black_and_white
+    // The default pen color is black.
+    // The default fill color is white.
     line E 150
     line NW 71
     line W 50
@@ -10,7 +13,7 @@ shape black_and_white
 end
 
 shape triangle
-    lines red
+    pen red
     fill yellow
     line E 400
     line N 300
@@ -18,7 +21,7 @@ shape triangle
 end
 
 shape square
-    lines blue
+    pen blue
     fill #aaffaa
     line S 100
     line W 100
@@ -26,6 +29,6 @@ shape square
     line E 100
 end
 
-draw triangle //The default position is 0,0, the center of the canvas
+draw triangle // The default position is 0,0 which is the center of the canvas.
 draw square at -10, -10
 draw black_and_white at 225, 150

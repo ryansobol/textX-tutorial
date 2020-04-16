@@ -1,12 +1,12 @@
 Scene:
     shapes*=Shape
-    draw_instructions*=DrawInstruction
+    draws*=Draw
 ;
 
 Shape:
     'shape' name=ID
-        line_color=LineColor?
-        fill_color=FillColor?
+        pencolor=PenColor?
+        fillcolor=FillColor?
         lines+=Line
     'end'
 ;
@@ -15,8 +15,8 @@ Color:
     'red' | 'green' | 'blue' | 'yellow' | 'magenta' | 'cyan' | 'black' | 'white' | /#[0-9a-f]{6}/
 ;
 
-LineColor:
-    'lines' color=Color
+PenColor:
+    'pen' color=Color
 ;
 
 FillColor:
@@ -40,7 +40,7 @@ Angle:
     degrees=FLOAT ('°' | 'deg')
 ;
 
-DrawInstruction:
+Draw:
     'draw' shape=[Shape] position=Position?
 ;
 
