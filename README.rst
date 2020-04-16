@@ -10,5 +10,4 @@ poetry run textx generate turtle.tx --target=dot --overwrite
 dot -Tpng -O turtle.dot
 open turtle.dot.png
 poetry run python main.py
-poetry run black .
 ```
